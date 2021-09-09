@@ -1,5 +1,24 @@
 import React from "react"
+import { Flex, Text, Box } from "@chakra-ui/react"
+import { Link } from "gatsby"
+import Layout from "../components/Layout"
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <Layout>
+      <Flex height="95vh" justifyContent="center" alignItems="center">
+        <Box>
+          <Text fontSize="6xl">Hi I'm Donovan!</Text>
+          <Text fontSize="3xl">
+            I'm a <Text color="pink.400" display="inline">Frontend developer</Text> making the internet fun
+          </Text>
+          <Link>
+            <Text fontSize="3xl" >
+              Check out my work!
+            </Text>
+          </Link>
+        </Box>
+      </Flex>
+    </Layout>
+  )
 }
