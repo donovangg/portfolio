@@ -8,8 +8,6 @@ export default function Home() {
     <Layout>
       <Flex height="90vh" justifyContent="center" alignItems="center">
         <Flex
-          border="2px"
-          borderColor="red.200"
           m={0}
           flexDir="column"
           textAlign={['center', 'center', 'left', 'left']}

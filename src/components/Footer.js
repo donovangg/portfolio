@@ -9,16 +9,40 @@ export default function Footer() {
   return (
     <Flex
       as="footer"
-      border="3px"
       width="15%"
-      height="5vh"
+      height="6vh"
+
       justifyContent="space-around"
-      borderColor="red.400"
       display={["none", "none", "flex"]}
+      position="fixed"
+      bottom="0"
     >
-        <IconButton icon={<FaGithub />}/>
-        <IconButton icon={<FaTwitter />}/>
-        <IconButton icon={<FaLinkedinIn  />}/>
+        <Flex justifyContent="space-around" width="100%">
+        <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaGithub />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+      <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaTwitter />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+      <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaLinkedinIn />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+        </Flex>
     </Flex>
   )
 }
