@@ -6,7 +6,7 @@ export default function NavItem({ item, to}) {
   return (
     <Flex>
       <Link to={to}>
-        <Text>{item}</Text>
+        <Text fontSize="2xl">{item}</Text>
       </Link>
     </Flex>
   )
