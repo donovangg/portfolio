@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 export default function Home() {
   return (
     <Layout>
-      <Flex height="95vh" justifyContent="center" alignItems="center">
+      <Flex height="90vh" justifyContent="center" alignItems="center">
         <Flex
           border="2px"
           borderColor="red.200"
