@@ -23,12 +23,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   return (
-    <Flex
-      as="nav"
-      height="5vh"
-      justifyContent="flex-end"
-      alignItems="center"
-    >
+    <Flex as="nav" height="5vh" justifyContent="flex-end" alignItems="center">
       <Button
         ref={btnRef}
         colorScheme="teal"
@@ -36,6 +31,14 @@ export default function Navbar() {
         onClick={onOpen}
         backgroundColor="transparent"
         color="black.400"
+        variant="none"
+        fontSize="3xl"
+        _focus={{ border: "none", backgroundColor: "transparent" }}
+        _hover={{
+            background: "white",
+            color: "pink.400",
+            transition: "0.3s"
+          }}
       >
         <FaHamburger />
       </Button>
@@ -59,32 +62,32 @@ export default function Navbar() {
           </DrawerBody>
 
           <DrawerFooter>
-          <Flex justifyContent="space-around" width="100%">
-        <a href="https://github.com/donovangomez" target="_blank">
-        <IconButton
-          icon={<FaGithub />}
-          backgroundColor="transparent"
-          border="2px"
-          borderRadius="full"
-        />
-      </a>
-      <a href="https://github.com/donovangomez" target="_blank">
-        <IconButton
-          icon={<FaTwitter />}
-          backgroundColor="transparent"
-          border="2px"
-          borderRadius="full"
-        />
-      </a>
-      <a href="https://github.com/donovangomez" target="_blank">
-        <IconButton
-          icon={<FaLinkedinIn />}
-          backgroundColor="transparent"
-          border="2px"
-          borderRadius="full"
-        />
-      </a>
-        </Flex>
+            <Flex justifyContent="space-around" width="100%">
+              <a href="https://github.com/donovangomez" target="_blank">
+                <IconButton
+                  icon={<FaGithub />}
+                  backgroundColor="transparent"
+                  border="2px"
+                  borderRadius="full"
+                />
+              </a>
+              <a href="https://github.com/donovangomez" target="_blank">
+                <IconButton
+                  icon={<FaTwitter />}
+                  backgroundColor="transparent"
+                  border="2px"
+                  borderRadius="full"
+                />
+              </a>
+              <a href="https://github.com/donovangomez" target="_blank">
+                <IconButton
+                  icon={<FaLinkedinIn />}
+                  backgroundColor="transparent"
+                  border="2px"
+                  borderRadius="full"
+                />
+              </a>
+            </Flex>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -97,7 +100,7 @@ export default function Navbar() {
         display={["none", "none", "flex"]}
       >
         <NavItem item="Home" to="/" />
-        <NavItem item="Portfolio" to="/portfolio" />
+        <NavItem item="Portfolio" to="/projects" />
         <NavItem item="About" to="/about" />
         <NavItem item="Blog" to="/blog" />
         <NavItem item="Contact" to="/contact" />

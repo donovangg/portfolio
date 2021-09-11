@@ -10,7 +10,8 @@ export default function NavItem({ item, to }) {
           fontSize="2xl"
           _hover={{
             background: "white",
-            color: "teal.500",
+            color: "pink.400",
+            transition: "0.3s"
           }}
         >
           {item}
