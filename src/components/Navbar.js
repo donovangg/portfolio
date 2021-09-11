@@ -55,7 +55,7 @@ export default function Navbar() {
 
           <DrawerBody>
             <NavItem item="Home" to="/" />
-            <NavItem item="Portfolio" to="/portfolio" />
+            <NavItem item="Projects" to="/projects" />
             <NavItem item="About" to="/about" />
             <NavItem item="Blog" to="/blog" />
             <NavItem item="Contact" to="/contact" />

@@ -36,7 +36,7 @@ export default function Home() {
             </Text>{" "}
             making the internet fun
           </Text>
-          <Link textDecoration="underline" to="/portfolio">
+          <Link textDecoration="underline" to="/projects">
             <Text bgGradient="linear(to-l, #ED64A6,#B36FCC)"
               bgClip="text"
               fontSize="3xl"
