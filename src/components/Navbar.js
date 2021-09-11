@@ -4,7 +4,6 @@ import {
   Text,
   Box,
   IconButton,
-  Input,
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -16,7 +15,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 import NavItem from "./NavItem"
-
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
+import { FaHamburger } from "@react-icons/all-files/fa/FaHamburger"
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -32,8 +34,10 @@ export default function Navbar() {
         colorScheme="teal"
         display={["block", "block", "none", "none"]}
         onClick={onOpen}
+        backgroundColor="transparent"
+        color="black.400"
       >
-        Open
+        <FaHamburger />
       </Button>
       <Drawer
         isOpen={isOpen}
@@ -55,7 +59,32 @@ export default function Navbar() {
           </DrawerBody>
 
           <DrawerFooter>
-            social links
+          <Flex justifyContent="space-around" width="100%">
+        <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaGithub />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+      <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaTwitter />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+      <a href="https://github.com/donovangomez" target="_blank">
+        <IconButton
+          icon={<FaLinkedinIn />}
+          backgroundColor="transparent"
+          border="2px"
+          borderRadius="full"
+        />
+      </a>
+        </Flex>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
