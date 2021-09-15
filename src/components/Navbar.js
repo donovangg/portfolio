@@ -13,15 +13,18 @@ import {
   DrawerCloseButton,
   Button,
   useDisclosure,
+  useColorMode
 } from "@chakra-ui/react"
 import NavItem from "./NavItem"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 import { FaHamburger } from "@react-icons/all-files/fa/FaHamburger"
+
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+  const { toggleColorMode } = useColorMode();
   return (
     <Flex as="nav" height="5vh" justifyContent="flex-end" alignItems="center">
       <Button
@@ -104,6 +107,7 @@ export default function Navbar() {
         <NavItem item="About" to="/about" />
         <NavItem item="Blog" to="/blog" />
         <NavItem item="Contact" to="/contact" />
+        <Button onClick={toggleColorMode}>Toggle</Button>
       </Flex>
     </Flex>
   )
