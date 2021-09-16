@@ -15,20 +15,31 @@ import {
 export default function about() {
   return (
     <Layout>
-      <Grid
-    
-        gridTemplateColumns="repeat(3, 1fr)"
-        gap={6}
+      <Flex
+        flexDirection={["column", "column", "row", "row"]}
       >
-        <Flex flexDir="column">
-          <Text fontSize="4xl" mt={5}>Hi I'm Donovan!</Text>
+        <Flex flex="1" m={2} flexDir="column">
+          <Text
+            fontSize="6xl"
+            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgClip="text"
+            mt={5}
+          >
+            Hi I'm Donovan!
+          </Text>
           <Text fontSize="3xl">
             I'm a frontend developer born and raised in Los Angeles{" "}
           </Text>
           <StaticImage src="../images/portfolio-pic.png" />
         </Flex>
-        <Flex flexDir="column">
-          <Text fontSize="7xl" textAlign="center" textTransform="uppercase">
+        <Flex flex="1" m={2}  flexDir="column">
+          <Text
+            fontSize="7xl"
+            textAlign="center"
+            textTransform="uppercase"
+            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgClip="text"
+          >
             About
           </Text>
           <Text fontSize="lg" my={2}>
@@ -49,26 +60,35 @@ export default function about() {
             on a bug.
           </Text>
         </Flex>
-        <Flex flexDir="column">
-          <Text fontSize="7xl" textAlign="center">
+        <Flex flex="1" m={2}  flexDir="column">
+          <Text
+            fontSize="7xl"
+            textAlign="center"
+            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgClip="text"
+          >
             The Tech
           </Text>
-          <Text fontSize="lg"  my={2}>
+          <Text fontSize="lg" my={2}>
             If you'd like to see some projects I've worked on check the{" "}
-            <Link to="/projects">projects</Link> section. My <Link>Blog</Link> is where you can see my thoughts on why and how I feel about the tech stack I chose.
+            <Link to="/projects">projects</Link> section. My <Link>Blog</Link>{" "}
+            is where you can see my thoughts on why and how I feel about the
+            tech stack I chose.
           </Text>
 
-          <Text fontSize="lg" >Some tech I've worked with: </Text>
+          <Text fontSize="lg">Some tech I've worked with: </Text>
           <UnorderedList>
             <ListItem>HTML / CSS / JavaScript</ListItem>
             <ListItem>ReactJS</ListItem>
             <ListItem>GatsbyJS</ListItem>
             <ListItem>Chakra UI / TailwindCSS</ListItem>
-            <ListItem><a href="#">GitHub</a> for my repos</ListItem>
+            <ListItem>
+              <a href="#">GitHub</a> for my repos
+            </ListItem>
             <ListItem>Figma to put down my ideas</ListItem>
           </UnorderedList>
         </Flex>
-      </Grid>
+      </Flex>
     </Layout>
   )
 }

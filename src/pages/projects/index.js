@@ -10,35 +10,39 @@ export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
+      <Box width="90%" m="auto">
+        <Text textAlign="center" fontSize="7xl">Projects</Text>
+      </Box>
       <Flex
-        border="2px"
         margin="auto"
         justifyContent="space-around"
+        flexWrap="wrap"
         width="90%"
-        borderColor="red.400"
       >
         {projects.map(project => (
           <Box
-            border="2px"
-            width="22rem"
-            borderColor="blue.400"
-            justifyContent="center"
+            width="24rem"
+            height="24rem"
+            m={2}
           >
-            <Link to={"/projects" + project.frontmatter.slug} key={project.id}>
-              <Flex flexDir="column" border="2px" height="100%" width="100%">
-                <Box flex="1">
-                  <h3>{project.frontmatter.title}</h3>
-                  <p>{project.frontmatter.stack}</p>
-                </Box>
-                <Box flex="1">
-                  <GatsbyImage
-                    image={getImage(project.frontmatter.thumb)}
-                    width="100%"
-                    height="100%"
-                  />
-                </Box>
-              </Flex>
-            </Link>
+            <Flex flexDir="column"  height="100%" width="100%" _hover={{  boxShadow:"lg",transform:"translateY(-10px)", transition:"0.4s"}}>
+            <Box flex="1">
+                <GatsbyImage
+                  image={getImage(project.frontmatter.thumb)}
+                />
+              </Box>
+              <Box  flex="1" p={2}  position="relative">
+                <Text fontSize="4xl">{project.frontmatter.title}</Text>
+                <Text fontSize="2xl">{project.frontmatter.stack}</Text>
+                <Link to={project.frontmatter.slug}>
+                  <Text fontSize="3xl" position="absolute" bottom="0"
+                   _hover={{ textDecoration:"underline", transition:"textDecoration 0.4s"}}
+                  >
+                  Read More
+                  </Text>
+                  </Link>
+              </Box>
+            </Flex>
           </Box>
         ))}
       </Flex>
@@ -48,20 +52,21 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-  query MyQuery {
-    allMarkdownRemark {
-      nodes {
-        frontmatter {
-          title
-          stack
-          slug
-          thumb {
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
+query MyQuery {
+  allMarkdownRemark {
+    nodes {
+      frontmatter {
+        title
+        stack
+        slug
+        thumb {
+          childImageSharp {
+            gatsbyImageData(transformOptions: {fit: COVER})
           }
         }
       }
     }
   }
+}
+
 `

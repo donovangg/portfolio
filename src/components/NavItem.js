@@ -9,7 +9,6 @@ export default function NavItem({ item, to }) {
         <Text
           fontSize="2xl"
           _hover={{
-           
             color: "green.300",
             transition: "0.3s"
           }}
