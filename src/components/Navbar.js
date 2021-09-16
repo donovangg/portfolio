@@ -13,7 +13,7 @@ import {
   DrawerCloseButton,
   Button,
   useDisclosure,
-  useColorMode
+  useColorMode,
 } from "@chakra-ui/react"
 import NavItem from "./NavItem"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
@@ -26,9 +26,16 @@ import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-  const { toggleColorMode, colorMode } = useColorMode();
+  const { toggleColorMode, colorMode } = useColorMode()
   return (
-    <Flex as="nav" p={1} justifyContent="flex-end" borderTop="4px" borderColor="pink.400" alignItems="center">
+    <Flex
+      as="nav"
+      p={1}
+      justifyContent="space-between"
+      borderTop="4px"
+      borderColor="pink.400"
+      alignItems="center"
+    >
       <Button
         ref={btnRef}
         colorScheme="teal"
@@ -40,10 +47,12 @@ export default function Navbar() {
         fontSize="3xl"
         _focus={{ border: "none", backgroundColor: "transparent" }}
         _hover={{
-            background: "white",
-            color: "pink.400",
-            transition: "0.3s"
-          }}
+          background: "white",
+          color: "pink.400",
+          transition: "0.3s",
+        }}
+        position="sticky"
+        top="0"
       >
         <FaHamburger />
       </Button>
@@ -96,6 +105,36 @@ export default function Navbar() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      <Flex
+        justifyContent="space-around"
+        width="15%"
+        display={[ "none", "none", "none", "flex"]}
+      >
+        <a href="https://github.com/donovangomez" target="_blank">
+          <IconButton
+            icon={<FaGithub />}
+            backgroundColor="transparent"
+            border="2px"
+            borderRadius="full"
+          />
+        </a>
+        <a href="https://github.com/donovangomez" target="_blank">
+          <IconButton
+            icon={<FaTwitter />}
+            backgroundColor="transparent"
+            border="2px"
+            borderRadius="full"
+          />
+        </a>
+        <a href="https://github.com/donovangomez" target="_blank">
+          <IconButton
+            icon={<FaLinkedinIn />}
+            backgroundColor="transparent"
+            border="2px"
+            borderRadius="full"
+          />
+        </a>
+      </Flex>
 
       <Flex
         border="3px"
@@ -111,15 +150,15 @@ export default function Navbar() {
         <NavItem item="Blog" to="/blog" />
         <NavItem item="Contact" to="/contact" />
         <Box>
-        <IconButton 
-          icon={colorMode == "light" ? <FaMoon /> : <FaSun />}
-          aria-label="Toggle theme"
-          onClick={toggleColorMode}
-          variant="unstyled"
-          fontSize="2xl"
-          _hover={{ color: "pink.400" }}
-          _focus={{ border: "none", backgroundColor: "transparent" }}
-        />
+          <IconButton
+            icon={colorMode == "light" ? <FaMoon /> : <FaSun />}
+            aria-label="Toggle theme"
+            onClick={toggleColorMode}
+            variant="unstyled"
+            fontSize="2xl"
+            _hover={{ color: "pink.400" }}
+            _focus={{ border: "none", backgroundColor: "transparent" }}
+          />
         </Box>
       </Flex>
     </Flex>

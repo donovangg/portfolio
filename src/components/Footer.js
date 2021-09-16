@@ -10,14 +10,14 @@ export default function Footer() {
     <Flex
       as="footer"
       width="15%"
-      height="6vh"
-
       justifyContent="space-around"
       display={["none", "none", "flex"]}
       position="fixed"
       bottom="0"
+      border="2px"
+      width="100%"
     >
-        <Flex justifyContent="space-around" width="100%">
+        <Flex justifyContent="space-around" width="15%">
         <a href="https://github.com/donovangomez" target="_blank">
         <IconButton
           icon={<FaGithub />}
