@@ -20,13 +20,15 @@ import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 import { FaHamburger } from "@react-icons/all-files/fa/FaHamburger"
+import { FaSun } from "@react-icons/all-files/fa/FaSun"
+import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-  const { toggleColorMode } = useColorMode();
+  const { toggleColorMode, colorMode } = useColorMode();
   return (
-    <Flex as="nav" height="5vh" justifyContent="flex-end" alignItems="center">
+    <Flex as="nav" p={1} justifyContent="flex-end" borderTop="4px" borderColor="pink.400" alignItems="center">
       <Button
         ref={btnRef}
         colorScheme="teal"
@@ -98,8 +100,9 @@ export default function Navbar() {
       <Flex
         border="3px"
         width="38%"
+        height="100%"
         justifyContent="space-around"
-        borderColor="red.400"
+        align-alignItems="center"
         display={["none", "none", "flex"]}
       >
         <NavItem item="Home" to="/" />
@@ -107,7 +110,17 @@ export default function Navbar() {
         <NavItem item="About" to="/about" />
         <NavItem item="Blog" to="/blog" />
         <NavItem item="Contact" to="/contact" />
-        <Button onClick={toggleColorMode}>Toggle</Button>
+        <Box>
+        <IconButton 
+          icon={colorMode == "light" ? <FaMoon /> : <FaSun />}
+          aria-label="Toggle theme"
+          onClick={toggleColorMode}
+          variant="unstyled"
+          fontSize="2xl"
+          _hover={{ color: "pink.400" }}
+          _focus={{ border: "none", backgroundColor: "transparent" }}
+        />
+        </Box>
       </Flex>
     </Flex>
   )
