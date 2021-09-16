@@ -32,8 +32,8 @@ export default function Navbar() {
       as="nav"
       p={1}
       justifyContent="space-between"
-      borderTop="4px"
-      borderColor="pink.400"
+      borderTop="8px"
+      borderColor="green.100"
       alignItems="center"
     >
       <Button
@@ -48,7 +48,7 @@ export default function Navbar() {
         _focus={{ border: "none", backgroundColor: "transparent" }}
         _hover={{
           background: "white",
-          color: "pink.400",
+          color: "green.300",
           transition: "0.3s",
         }}
         position="sticky"
