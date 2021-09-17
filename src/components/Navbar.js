@@ -118,7 +118,7 @@ export default function Navbar() {
             borderRadius="full"
           />
         </a>
-        <a href="https://github.com/donovangomez" target="_blank">
+        <a href="https://twitter.com/donovan_kun" target="_blank">
           <IconButton
             icon={<FaTwitter />}
             backgroundColor="transparent"
@@ -126,7 +126,7 @@ export default function Navbar() {
             borderRadius="full"
           />
         </a>
-        <a href="https://github.com/donovangomez" target="_blank">
+        <a href="https://www.linkedin.com/in/donovan-gomez/" target="_blank">
           <IconButton
             icon={<FaLinkedinIn />}
             backgroundColor="transparent"
