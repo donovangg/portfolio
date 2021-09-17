@@ -11,7 +11,15 @@ export default function Projects({ data }) {
   return (
     <Layout>
       <Box width="90%" m="auto">
-        <Text textAlign="center" fontSize="7xl">Projects</Text>
+        <Text
+          textAlign="center"
+          bgGradient="linear(to-l, #48BB78,#009D81)"
+          bgClip="text"
+          fontSize="8xl"
+          fontWeight="extrabold"
+        >
+          Projects
+        </Text>
       </Box>
       <Flex
         margin="auto"
@@ -20,27 +28,38 @@ export default function Projects({ data }) {
         width="90%"
       >
         {projects.map(project => (
-          <Box
-            width="24rem"
-            height="24rem"
-            m={2}
-          >
-            <Flex flexDir="column"  height="100%" width="100%" _hover={{  boxShadow:"lg",transform:"translateY(-10px)", transition:"0.4s"}}>
-            <Box flex="1">
-                <GatsbyImage
-                  image={getImage(project.frontmatter.thumb)}
-                />
+          <Box width="24rem" height="24rem" m={2}>
+            <Flex
+              flexDir="column"
+              height="100%"
+              width="100%"
+              _hover={{
+                boxShadow: "lg",
+                transform: "translateY(-10px)",
+                transition: "0.4s",
+              }}
+            >
+              <Box flex="1">
+                <GatsbyImage image={getImage(project.frontmatter.thumb)} />
               </Box>
-              <Box  flex="1" p={2}  position="relative">
+              <Box flex="1" p={2} position="relative">
+                <Link to={project.frontmatter.slug} >
                 <Text fontSize="4xl">{project.frontmatter.title}</Text>
                 <Text fontSize="2xl">{project.frontmatter.stack}</Text>
                 <Link to={project.frontmatter.slug}>
-                  <Text fontSize="3xl" position="absolute" bottom="0"
-                   _hover={{ textDecoration:"underline", transition:"textDecoration 0.4s"}}
+                  <Text
+                    fontSize="3xl"
+                    position="absolute"
+                    bottom="0"
+                    _hover={{
+                      textDecoration: "underline",
+                      transition: "textDecoration 0.4s",
+                    }}
                   >
-                  Read More
+                    Read More
                   </Text>
-                  </Link>
+                </Link>
+                </Link>
               </Box>
             </Flex>
           </Box>
@@ -52,21 +71,20 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-query MyQuery {
-  allMarkdownRemark {
-    nodes {
-      frontmatter {
-        title
-        stack
-        slug
-        thumb {
-          childImageSharp {
-            gatsbyImageData(transformOptions: {fit: COVER})
+  query MyQuery {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          title
+          stack
+          slug
+          thumb {
+            childImageSharp {
+              gatsbyImageData(transformOptions: { fit: COVER })
+            }
           }
         }
       }
     }
   }
-}
-
 `

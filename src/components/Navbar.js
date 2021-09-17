@@ -33,7 +33,7 @@ export default function Navbar() {
       p={1}
       justifyContent="space-between"
       borderTop="8px"
-      borderColor="green.100"
+      borderColor="green.400"
       alignItems="center"
     >
       <Button
@@ -156,7 +156,7 @@ export default function Navbar() {
             onClick={toggleColorMode}
             variant="unstyled"
             fontSize="2xl"
-            _hover={{ color: "pink.400" }}
+            _hover={{ color: "green.400" }}
             _focus={{ border: "none", backgroundColor: "transparent" }}
           />
         </Box>
