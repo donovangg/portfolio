@@ -36,7 +36,7 @@ export default function contact() {
         justifyContent="flex-start"
         alignItems="center"
       >
-        <Flex flex="1" flexDir="column" alignItems="center">
+        <Flex as="form" flex="1" flexDir="column" alignItems="center">
           <FormControl id="first-name" isRequired>
             <FormLabel
               bgGradient="linear(to-l, #48BB78,#009D81)"
