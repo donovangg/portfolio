@@ -5,6 +5,7 @@ import {
   Box,
   Text,
   FormControl,
+  Heading,
   FormLabel,
   Input,
   FormErrorMessage,
@@ -17,17 +18,17 @@ export default function contact() {
   return (
     <Layout>
       <Box mt={12}>
-        <Text
-          bgGradient="linear(to-l, #48BB78,#009D81)"
-          bgClip="text"
-          fontSize="7xl"
-          fontWeight="extrabold"
+        <Heading
+           bgGradient="linear(to-r, #4299E1,#5F87D9)"
+           bgClip="text"
+           fontSize="7xl"
+           fontWeight="extrabold"
           textAlign="center"
         >
           Contact
-        </Text>
-        <Text fontSize="3xl" textAlign="center">
-          Drop me a line
+        </Heading>
+        <Text fontSize="2xl" textAlign="center">
+          Want to make something cool? Feedback on the site? Drop me a line.
         </Text>
       </Box>
       <Flex
@@ -39,7 +40,7 @@ export default function contact() {
         <Flex as="form" flex="1" flexDir="column" alignItems="center">
           <FormControl id="first-name" isRequired>
             <FormLabel
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="2xl"
               fontWeight="extrabold"
@@ -50,7 +51,7 @@ export default function contact() {
           </FormControl>
           <FormControl id="last-name" isRequired>
             <FormLabel
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="2xl"
               fontWeight="extrabold"
@@ -61,7 +62,7 @@ export default function contact() {
           </FormControl>
           <FormControl id="email" isRequired>
             <FormLabel
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="2xl"
               fontWeight="extrabold"
@@ -72,7 +73,7 @@ export default function contact() {
           </FormControl>
           <FormControl id="message" isRequired>
             <FormLabel
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="2xl"
               fontWeight="extrabold"
@@ -81,7 +82,7 @@ export default function contact() {
             </FormLabel>
             <Textarea placeholder="In n Out is awesome" />
           </FormControl>
-          <Button width="100%" backgroundColor="green.300" type="submit">Send</Button>
+          <Button width="100%" backgroundColor="blue.400" type="submit">Send</Button>
         </Flex>
       </Flex>
     </Layout>

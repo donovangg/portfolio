@@ -13,7 +13,7 @@ export default function Projects({ data }) {
       <Box width="90%" m="auto">
         <Text
           textAlign="center"
-          bgGradient="linear(to-l, #48BB78,#009D81)"
+          bgGradient="linear(to-r, #4299E1,#5F87D9)"
           bgClip="text"
           fontSize="8xl"
           fontWeight="extrabold"

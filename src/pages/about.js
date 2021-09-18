@@ -3,9 +3,8 @@ import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import {
-  Grid,
-  GridItem,
   Box,
+  Heading,
   Flex,
   Text,
   UnorderedList,
@@ -21,8 +20,9 @@ export default function about() {
         <Flex flex="1" m={2} flexDir="column">
           <Text
             fontSize="6xl"
-            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgGradient="linear(to-r, #4299E1,#5F87D9)"
             bgClip="text"
+            fontWeight="extrabold"
             mt={5}
           >
             Hi I'm Donovan!
@@ -37,8 +37,9 @@ export default function about() {
             fontSize="7xl"
             textAlign="center"
             textTransform="uppercase"
-            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgGradient="linear(to-r, #4299E1,#5F87D9)"
             bgClip="text"
+            fontWeight="extrabold"
           >
             About
           </Text>
@@ -64,8 +65,9 @@ export default function about() {
           <Text
             fontSize="7xl"
             textAlign="center"
-            bgGradient="linear(to-l, #48BB78,#009D81)"
+            bgGradient="linear(to-r, #4299E1,#5F87D9)"
             bgClip="text"
+            fontWeight="extrabold"
           >
             The Tech
           </Text>

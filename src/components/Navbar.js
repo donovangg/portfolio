@@ -32,8 +32,8 @@ export default function Navbar() {
       as="nav"
       p={1}
       justifyContent="space-between"
-      borderTop="8px"
-      borderColor="green.400"
+      borderTop="4px"
+      borderColor="blue.400"
       alignItems="center"
     >
       <Button

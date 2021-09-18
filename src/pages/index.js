@@ -1,10 +1,8 @@
 import React from "react"
-import { Flex, Text, Box } from "@chakra-ui/react"
+import { Flex, Text, Heading } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function Home() {
   return (
@@ -15,36 +13,42 @@ export default function Home() {
           flexDir="column"
           textAlign={["center", "center", "left", "left"]}
         >
-          <Text fontSize="8xl" mx={0} px={0}>
+          <Heading fontSize="8xl" as="h1" mx={0} px={0}>
             Hi I'm{" "}
-            <Text
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+            <Heading
+              as="h1"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="8xl"
               fontWeight="extrabold"
               display="inline"
             >
               Donovan!
-            </Text>
-          </Text>
-          <Text fontSize="4xl">
+            </Heading>
+          </Heading>
+          <Heading fontSize="4xl">
             I'm a{" "}
-            <Text
+            <Heading
               display="inline"
-              bgGradient="linear(to-l, #48BB78,#009D81)"
+              bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
               fontSize="4xl"
               fontWeight="extrabold"
             >
               Frontend developer
-            </Text>{" "}
+            </Heading>{" "}
             making the internet fun
-          </Text>
+          </Heading>
           <AniLink cover to="/projects">
-            <Text color="green.400" fontWeight="extrabold" textDecor="underline" fontSize="4xl">
+            <Text
+              color="blue.400"
+             textDecor="underline"
+              fontSize="4xl"
+              textDecor="underline"
+            >
               Check out my work!
             </Text>
-            </AniLink>
+          </AniLink>
         </Flex>
       </Flex>
     </Layout>

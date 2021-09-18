@@ -6,11 +6,11 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 export default function NavItem({ item, to }) {
   return (
     <Flex>
-      <AniLink cover to={to}>
+      <AniLink cover to={to} bg="#80A4FD">
         <Text
           fontSize="2xl"
           _hover={{
-            color: "green.300",
+            color: "blue.300",
             transition: "0.3s"
           }}
         >
