@@ -2,6 +2,9 @@ import React from "react"
 import { Flex, Text, Box } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+
 
 export default function Home() {
   return (
@@ -37,11 +40,11 @@ export default function Home() {
             </Text>{" "}
             making the internet fun
           </Text>
-          <Link to="/projects" border="2px">
+          <AniLink cover to="/projects">
             <Text color="green.400" fontWeight="extrabold" textDecor="underline" fontSize="4xl">
               Check out my work!
             </Text>
-          </Link>
+            </AniLink>
         </Flex>
       </Flex>
     </Layout>

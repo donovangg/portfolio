@@ -144,7 +144,7 @@ export default function Navbar() {
         align-alignItems="center"
         display={["none", "none", "flex"]}
       >
-        <NavItem item="Home" to="/" />
+        <NavItem item="Home"  to="/" />
         <NavItem item="Portfolio" to="/projects" />
         <NavItem item="About" to="/about" />
         <NavItem item="Blog" to="/blog" />

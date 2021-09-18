@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Flex, Text, Box } from "@chakra-ui/react"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default function NavItem({ item, to }) {
   return (
     <Flex>
-      <Link to={to}>
+      <AniLink cover to={to}>
         <Text
           fontSize="2xl"
           _hover={{
@@ -15,7 +16,7 @@ export default function NavItem({ item, to }) {
         >
           {item}
         </Text>
-      </Link>
+      </AniLink>
     </Flex>
   )
 }
