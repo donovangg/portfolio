@@ -15,7 +15,7 @@ export default function Projects({ data }) {
           textAlign="center"
           bgGradient="linear(to-r, #4299E1,#5F87D9)"
           bgClip="text"
-          fontSize="8xl"
+          fontSize={['6xl', '6xl', '8xl']}
           fontWeight="extrabold"
         >
           Projects
