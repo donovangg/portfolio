@@ -46,7 +46,7 @@ export default function Projects({ data }) {
                 <Link to={project.frontmatter.slug} >
                 <Text fontSize="4xl">{project.frontmatter.title}</Text>
                 <Text fontSize="2xl">{project.frontmatter.stack}</Text>
-                <Link to={project.frontmatter.slug}>
+                <Link to={"/projects" + project.frontmatter.slug} key={project.id}>
                   <Text
                     fontSize="3xl"
                     position="absolute"

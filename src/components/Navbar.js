@@ -39,7 +39,7 @@ export default function Navbar() {
       <Button
         ref={btnRef}
         colorScheme="teal"
-        display={["block", "block", "none", "none"]}
+        display={["block", "block", "block", "none"]}
         onClick={onOpen}
         backgroundColor="transparent"
         color="black.400"
@@ -48,7 +48,7 @@ export default function Navbar() {
         _focus={{ border: "none", backgroundColor: "transparent" }}
         _hover={{
           background: "white",
-          color: "green.300",
+          color: "blue.300",
           transition: "0.3s",
         }}
         position="sticky"
@@ -142,7 +142,7 @@ export default function Navbar() {
         height="100%"
         justifyContent="space-around"
         align-alignItems="center"
-        display={["none", "none", "flex"]}
+        display={["none", "none","none", "flex"]}
       >
         <NavItem item="Home"  to="/" />
         <NavItem item="Portfolio" to="/projects" />
@@ -156,7 +156,7 @@ export default function Navbar() {
             onClick={toggleColorMode}
             variant="unstyled"
             fontSize="2xl"
-            _hover={{ color: "green.400" }}
+            _hover={{ color: "blue.400" }}
             _focus={{ border: "none", backgroundColor: "transparent" }}
           />
         </Box>
