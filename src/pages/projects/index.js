@@ -46,7 +46,7 @@ export default function Projects({ data }) {
                 <Link to={project.frontmatter.slug} >
                 <Text fontSize="4xl">{project.frontmatter.title}</Text>
                 <Text fontSize="2xl">{project.frontmatter.stack}</Text>
-                <Link to={"/projects" + project.frontmatter.slug} key={project.id}>
+                <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
                   <Text
                     fontSize="3xl"
                     position="absolute"
@@ -60,6 +60,7 @@ export default function Projects({ data }) {
                   </Text>
                 </Link>
                 </Link>
+                <a href={project.frontmatter.repo}>Git</a>
               </Box>
             </Flex>
           </Box>
@@ -78,6 +79,8 @@ export const query = graphql`
           title
           stack
           slug
+          link
+          repo
           thumb {
             childImageSharp {
               gatsbyImageData(transformOptions: { fit: COVER })

@@ -8,5 +8,5 @@ repo: https://github.com/donovangomez/heyDJ
 link: In construction
 ---
 
-# Project explanation
-HeyDJ is a D4DJ resource website.
+# Project Explanation
+<Text>HeyDJ is a D4DJ resource website.</Text>
