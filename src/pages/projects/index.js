@@ -2,7 +2,7 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Flex, Text, Box } from "@chakra-ui/react"
+import { Flex, Text, Box, IconButton } from "@chakra-ui/react"
 
 export default function Projects({ data }) {
   console.log(data)
@@ -15,7 +15,7 @@ export default function Projects({ data }) {
           textAlign="center"
           bgGradient="linear(to-r, #4299E1,#5F87D9)"
           bgClip="text"
-          fontSize={['6xl', '6xl', '8xl']}
+          fontSize={["6xl", "6xl", "8xl"]}
           fontWeight="extrabold"
         >
           Projects
@@ -43,24 +43,26 @@ export default function Projects({ data }) {
                 <GatsbyImage image={getImage(project.frontmatter.thumb)} />
               </Box>
               <Box flex="1" p={2} position="relative">
-                <Link to={project.frontmatter.slug} >
-                <Text fontSize="4xl">{project.frontmatter.title}</Text>
-                <Text fontSize="2xl">{project.frontmatter.stack}</Text>
-                <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-                  <Text
-                    fontSize="3xl"
-                    position="absolute"
-                    bottom="0"
-                    _hover={{
-                      textDecoration: "underline",
-                      transition: "textDecoration 0.4s",
-                    }}
+                <Link to={project.frontmatter.slug}>
+                  <Text fontSize="4xl">{project.frontmatter.title}</Text>
+                  <Text fontSize="2xl">{project.frontmatter.stack}</Text>
+                  <Link
+                    to={"/projects/" + project.frontmatter.slug}
+                    key={project.id}
                   >
-                    Read More
-                  </Text>
+                    <Text
+                      fontSize="3xl"
+                      position="absolute"
+                      bottom="0"
+                      _hover={{
+                        textDecoration: "underline",
+                        transition: "textDecoration 0.4s",
+                      }}
+                    >
+                      Read More
+                    </Text>
+                  </Link>
                 </Link>
-                </Link>
-                <a href={project.frontmatter.repo}>Git</a>
               </Box>
             </Flex>
           </Box>

@@ -8,5 +8,5 @@ repo: https://github.com/donovangomez/my-character-list
 link: https://anicharadb.netlify.app/
 ---
 
-# Project Explanation 
+## Project Explanation
 AnicharaDB is a search page to look up anime characters. The back end is an API called the JikanAPI. I used React hooks to be able to call the api using the search input and once the search is called with the button.
