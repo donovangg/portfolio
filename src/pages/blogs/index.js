@@ -3,8 +3,9 @@ import Layout from '../../components/Layout'
 
 export default function Blogs() {
     return (
-        <div>
+        <Layout>
             Blog page
-        </div>
+            <h2>Writers Block :'(</h2>
+        </Layout>
     )
 }

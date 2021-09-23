@@ -37,7 +37,7 @@ export default function Home() {
             >
               Frontend developer
             </Heading>{" "}
-            making the internet fun
+            making things on the internet.
           </Heading>
           <AniLink cover to="/projects">
             <Text
