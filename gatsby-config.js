@@ -6,13 +6,17 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Donovan Gomez | Web developer`,
+    description: `Donovan's webdev portfolio. You are amazing.`,
+  },
   plugins: [
     "@chakra-ui/gatsby-plugin",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-transition-link`, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
