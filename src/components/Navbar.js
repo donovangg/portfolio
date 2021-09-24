@@ -42,7 +42,7 @@ export default function Navbar() {
         display={["block", "block", "block", "none"]}
         onClick={onOpen}
         backgroundColor="transparent"
-        color="black.400"
+        color="gray.700"
         variant="none"
         fontSize="3xl"
         _focus={{ border: "none", backgroundColor: "transparent" }}

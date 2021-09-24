@@ -33,11 +33,12 @@ export default function contact() {
       </Box>
       <Flex
         m="auto"
-        width="50vw"
+        width={['90vw', '90vw', '50vw', '50vw']}
         justifyContent="flex-start"
         alignItems="center"
       >
-        <Flex as="form" flex="1" flexDir="column" alignItems="center">
+        <Flex as="form" flex="1" flexDir="column" 
+        alignItems="center">
           <FormControl id="first-name" isRequired>
             <FormLabel
               bgGradient="linear(to-r, #4299E1,#5F87D9)"

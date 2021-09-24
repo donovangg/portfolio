@@ -13,7 +13,7 @@ export default function Home() {
           flexDir="column"
           textAlign={["center", "center", "left", "left"]}
         >
-          <Heading fontSize="8xl" as="h1" mx={0} px={0}>
+          <Heading fontSize={['6xl', '6xl', '8xl']} color="gray.800" as="h1" mx={0} px={0}>
             Hi I'm{" "}
             <Heading
               as="h1"
@@ -26,7 +26,7 @@ export default function Home() {
               Donovan!
             </Heading>
           </Heading>
-          <Heading fontSize="4xl">
+          <Heading fontSize="4xl" color="gray.700">
             I'm a{" "}
             <Heading
               display="inline"
@@ -35,7 +35,7 @@ export default function Home() {
               fontSize="4xl"
               fontWeight="extrabold"
             >
-              Frontend developer
+              Frontend dev
             </Heading>{" "}
             making things on the internet.
           </Heading>
