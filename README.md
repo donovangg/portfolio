@@ -10,3 +10,7 @@ I've been hearing about this stuff on Twitter so I'm using:
   <li>GatsbyJS</li>
   <li>Chakra UI </li>
 </ul>
+
+
+[GitHub](http://github.com)
+[portfolio](https://donovangomez.dev/)
