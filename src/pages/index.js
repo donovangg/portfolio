@@ -1,10 +1,11 @@
 import React from "react"
-import { Flex, Text, Heading } from "@chakra-ui/react"
+import { Flex, Text, Heading, useColorModeValue } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function Home() {
+  const headingText = useColorModeValue('gray.800', 'gray.50')
   return (
     <Layout>
       <Flex height="90vh" justifyContent="center" alignItems="center">
@@ -13,7 +14,7 @@ export default function Home() {
           flexDir="column"
           textAlign={["center", "center", "left", "left"]}
         >
-          <Heading fontSize={['6xl', '6xl', '8xl']} color="gray.800" as="h1" mx={0} px={0}>
+          <Heading fontSize={['6xl', '6xl', '8xl']} color={headingText} as="h1" mx={0} px={0}>
             Hi I'm{" "}
             <Heading
               as="h1"
@@ -26,7 +27,7 @@ export default function Home() {
               Donovan!
             </Heading>
           </Heading>
-          <Heading fontSize="4xl" color="gray.700">
+          <Heading fontSize="4xl" color={headingText}>
             I'm a{" "}
             <Heading
               display="inline"
