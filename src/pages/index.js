@@ -1,11 +1,16 @@
 import React from "react"
-import { Flex, Text, Heading, useColorModeValue } from "@chakra-ui/react"
-import { Link } from "gatsby"
+import {
+  Flex,
+  Text,
+  Heading,
+  useColorModeValue,
+  Button,
+} from "@chakra-ui/react"
 import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function Home() {
-  const headingText = useColorModeValue('gray.800', 'gray.50')
+  const headingText = useColorModeValue("gray.800", "gray.50")
   return (
     <Layout>
       <Flex height="90vh" justifyContent="center" alignItems="center">
@@ -14,13 +19,19 @@ export default function Home() {
           flexDir="column"
           textAlign={["center", "center", "left", "left"]}
         >
-          <Heading fontSize={['6xl', '6xl', '8xl']} color={headingText} as="h1" mx={0} px={0}>
+          <Heading
+            fontSize={["6xl", "6xl", "8xl"]}
+            color={headingText}
+            as="h1"
+            mx={0}
+            px={0}
+          >
             Hi I'm{" "}
             <Heading
               as="h1"
               bgGradient="linear(to-r, #4299E1,#5F87D9)"
               bgClip="text"
-              fontSize={['6xl', '6xl', '8xl']}
+              fontSize={["6xl", "6xl", "8xl"]}
               fontWeight="extrabold"
               display="inline"
             >
@@ -41,14 +52,20 @@ export default function Home() {
             making things on the internet.
           </Heading>
           <AniLink cover to="/projects">
-            <Text
-              color="blue.400"
-             textDecor="underline"
-              fontSize="4xl"
-              textDecor="underline"
+            <Button
+              mt={6}
+              p={8}
+              variant="outline"
+              colorScheme="blue"
+              fontSize="2xl"
+              _hover={{
+                backgroundColor: "blue.400",
+                color: "white",
+                transition: "0.3s",
+              }}
             >
               Check out my work!
-            </Text>
+            </Button>
           </AniLink>
         </Flex>
       </Flex>
