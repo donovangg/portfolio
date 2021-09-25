@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Flex, Text, Box, IconButton } from "@chakra-ui/react"
 
 export default function Projects({ data }) {
-  console.log(data)
 
   const projects = data.allMarkdownRemark.nodes
   return (
@@ -74,22 +73,23 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-  query MyQuery {
-    allMarkdownRemark {
-      nodes {
-        frontmatter {
-          title
-          stack
-          slug
-          link
-          repo
-          thumb {
-            childImageSharp {
-              gatsbyImageData(transformOptions: { fit: COVER })
-            }
+query ProjectQuery {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "project"}}}) {
+    nodes {
+      frontmatter {
+        title
+        stack
+        slug
+        link
+        repo
+        thumb {
+          childImageSharp {
+            gatsbyImageData(transformOptions: {fit: COVER})
           }
         }
       }
     }
   }
+}
+
 `
