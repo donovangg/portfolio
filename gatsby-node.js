@@ -15,9 +15,9 @@ exports.createPages = async ({ graphql, actions}) => {
   `).then(result => {
     result.data.allMarkdownRemark.nodes.forEach(result => {
       createPage({
-        path: '/projects/' + node.frontmatter.slug,
+        path: '/projects/' + result.frontmatter.slug,
         component: path.resolve('./src/templates/project-details.js'),
-        context: { slug: node.frontmatter.slug }
+        context: { slug: result.frontmatter.slug }
     });
     });
   })  
@@ -36,9 +36,9 @@ exports.createPages = async ({ graphql, actions}) => {
   `).then(result => {
     result.data.allMarkdownRemark.nodes.forEach(result => {
       createPage({
-        path: '/blog/' + node.frontmatter.slug,
-        component: path.resolve('./src/templates/blog-details.js'),
-        context: { slug: node.frontmatter.slug }
+        path: '/blog/' + result.frontmatter.slug,
+        component: result.resolve('./src/templates/blog-details.js'),
+        context: { slug: result.frontmatter.slug }
     });
     });
   });
