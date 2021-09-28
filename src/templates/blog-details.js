@@ -1,25 +1,25 @@
-import React from 'react'
+import React from "react"
 import { graphql } from "gatsby"
 
+export default function blogDetails({ data }) {
+  const { html } = data.markdownRemark
 
-export default function blogDetails() {
-    const { html } = data.markdownRemark
-    const { title } = data.markdownRemark.frontmatter
-    return (
-        <div>
-            <h2>Yeet</h2>
-        </div>
-    )
+  return (
+    <div>
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </div>
+  )
 }
 
 export const query = graphql`
-query BlogQuery {
-    markdownRemark(frontmatter: {category: {eq: "blog"}}) {
+  query BlogQuery {
+    markdownRemark(frontmatter: { category: { eq: "blog" } }) {
       html
       frontmatter {
         title
       }
     }
   }
-  
 `
