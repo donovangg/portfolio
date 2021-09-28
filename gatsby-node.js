@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions}) => {
   
   // create another query for the blog page
   const { blogs } = await graphql(`
-  query Blogs {
+  query Blog {
     allMarkdownRemark(filter: {frontmatter: {category: {eq: "blog"}}}) {
       nodes {
         frontmatter {
@@ -25,7 +25,6 @@ exports.createPages = async ({ graphql, actions}) => {
       }
     }
   }
-  
   `)
 
   data.allMarkdownRemark.nodes.forEach(node => {
