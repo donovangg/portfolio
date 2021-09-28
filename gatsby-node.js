@@ -2,8 +2,8 @@ const path = require('path');
 
 exports.createPages = async ({ graphql, actions}) => {
   const { data } = await graphql(`
-  query MProjects {
-    allMarkdownRemark {
+  query Projects {
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "project"}}}) {
       nodes {
         frontmatter {
           slug
@@ -11,6 +11,21 @@ exports.createPages = async ({ graphql, actions}) => {
       }
     }
   }
+  
+  `)
+  
+  // create another query for the blog page
+  const { blogs } = await graphql(`
+  query Blogs {
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "blog"}}}) {
+      nodes {
+        frontmatter {
+          slug
+        }
+      }
+    }
+  }
+  
   `)
 
   data.allMarkdownRemark.nodes.forEach(node => {
@@ -20,4 +35,13 @@ exports.createPages = async ({ graphql, actions}) => {
           context: { slug: node.frontmatter.slug }
       })
   })
+
+   // generate page for blog page
+   blogs.allMarkdownRemark.nodes.forEach(node => {
+    actions.createPage({
+      path: '/blog/' + node.frontmatter.slug,
+      component: path.resolve('./src/templates/blog-details.js'),
+      context: { slug: node.frontmatter.slug }
+  })
+   })
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import { Flex, Text, Box, IconButton } from "@chakra-ui/react"
 
-export default function Blogs( {data} ) {
+export default function Blog( {data} ) {
     console.log(data)
     const blogPosts = data.allMarkdownRemark.nodes
     return (

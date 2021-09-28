@@ -71,7 +71,7 @@ export default function Navbar() {
             <NavItem item="Home" to="/" />
             <NavItem item="Projects" to="/projects" />
             <NavItem item="About" to="/about" />
-            <NavItem item="Blog" to="/blogs" />
+            <NavItem item="Blog" to="/blog" />
             <NavItem item="Contact" to="/contact" />
           </DrawerBody>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
         <NavItem item="Home"  to="/" />
         <NavItem item="Portfolio" to="/projects" />
         <NavItem item="About" to="/about" />
-        <NavItem item="Blog" to="/blogs" />
+        <NavItem item="Blog" to="/blog" />
         <NavItem item="Contact" to="/contact" />
         <Box>
           <IconButton
