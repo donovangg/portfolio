@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions}) => {
   }
   `)
 
-  projects.allMarkdownRemark.nodes.forEach(node => {
+  projects.data.allMarkdownRemark.nodes.forEach(node => {
       actions.createPage({
           path: '/projects/' + node.frontmatter.slug,
           component: path.resolve('./src/templates/project-details.js'),
@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions}) => {
   })
 
    // generate page for blog page
-   blogs.allMarkdownRemark.nodes.forEach(node => {
+   blogs.data.allMarkdownRemark.nodes.forEach(node => {
     actions.createPage({
       path: '/blog/' + node.frontmatter.slug,
       component: path.resolve('./src/templates/blog-details.js'),
