@@ -14,11 +14,11 @@ export default function ProjectDetails({ data }) {
   return (
     <Layout>
       <Flex flexDir="column" width="90%" height="100%" m="auto">
-        <Heading color="blue.400" fontSize="8xl">
+        <Heading color="blue.400" textAlign={['center', 'center', 'left', 'left']} fontSize="8xl">
           {title}
         </Heading>
-        <Text fontSize="2xl">Stack: {stack}</Text>
-        <Flex>
+        <Text fontSize="2xl" textAlign={['center', 'center', 'left', 'left']} >Stack: {stack}</Text>
+        <Flex justifyContent={['center', 'center', 'flex-start', 'flex-start']}>
           <a href={repo} fontSize="2xl">
             <IconButton icon={<FaGithub />} fontSize="2xl"  variant="none"/>
           </a>
@@ -30,7 +30,7 @@ export default function ProjectDetails({ data }) {
           className={styles.details}
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <Box width="50rem" m="auto">
+        <Box m="auto">
           <GatsbyImage
             image={getImage(
               data.markdownRemark.frontmatter.thumb.childImageSharp

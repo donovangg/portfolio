@@ -7,3 +7,15 @@
 .details h2 {
     font-size: 2.55rem;
 }
+
+@media(max-width: 650px) {
+
+    .details h2 {
+        text-align: center;
+    }
+
+    .details p {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
