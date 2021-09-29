@@ -2,10 +2,10 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Flex, Text, Box, IconButton } from "@chakra-ui/react"
+import { Flex, Text, Box, IconButton, Button } from "@chakra-ui/react"
+import { FaChevronRight } from "@react-icons/all-files/fa/FaChevronRight"
 
 export default function Projects({ data }) {
-
   const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
@@ -32,8 +32,9 @@ export default function Projects({ data }) {
               flexDir="column"
               height="100%"
               width="100%"
+              boxShadow="lg"
+              borderRadius="md"
               _hover={{
-                boxShadow: "lg",
                 transform: "translateY(-10px)",
                 transition: "0.4s",
               }}
@@ -43,23 +44,36 @@ export default function Projects({ data }) {
               </Box>
               <Box flex="1" p={2} position="relative">
                 <Link to={project.frontmatter.slug}>
-                  <Text fontSize="4xl">{project.frontmatter.title}</Text>
+                  <Text
+                    fontSize="4xl"
+                    bgGradient="linear(to-r, #4299E1,#5F87D9)"
+                    bgClip="text"
+                  >
+                    {project.frontmatter.title}
+                  </Text>
                   <Text fontSize="2xl">{project.frontmatter.stack}</Text>
                   <Link
                     to={"/projects/" + project.frontmatter.slug}
                     key={project.id}
                   >
-                    <Text
-                      fontSize="3xl"
-                      position="absolute"
-                      bottom="0"
-                      _hover={{
-                        textDecoration: "underline",
-                        transition: "textDecoration 0.4s",
-                      }}
-                    >
-                      Read More
-                    </Text>
+                    <Flex alignItems="center" position="absolute" bottom="0">
+                      <Text
+                        fontSize="3xl"
+                        bottom="0"
+                        _hover={{
+                          color:"blue.400",
+                          transition: "color 0.4s",
+                        }}
+                      >
+                        Read More
+                      </Text>
+                      <FaChevronRight fontSize="2rem"
+                        _hover={{
+                          color:"blue.400",
+                          transition: "color 0.4s",
+                        }}
+                      />
+                    </Flex>
                   </Link>
                 </Link>
               </Box>
@@ -73,23 +87,24 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-query ProjectQuery {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "project"}}}) {
-    nodes {
-      frontmatter {
-        title
-        stack
-        slug
-        link
-        repo
-        thumb {
-          childImageSharp {
-            gatsbyImageData(transformOptions: {fit: COVER})
+  query ProjectQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "project" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          stack
+          slug
+          link
+          repo
+          thumb {
+            childImageSharp {
+              gatsbyImageData(transformOptions: { fit: COVER })
+            }
           }
         }
       }
     }
   }
-}
-
 `
