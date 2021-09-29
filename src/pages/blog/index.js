@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../../components/Layout'
 import { Flex, Text, Box, IconButton } from "@chakra-ui/react"
 
@@ -11,8 +11,14 @@ export default function Blog( {data} ) {
             Blog page
             <h2>Writers Block :'(</h2>
             {blogPosts.map((blog) => (
+              <div>
                 <h2>{blog.frontmatter.title}</h2>
+                <Link to={blog.frontmatter.slug}>
+                <Text>yeet</Text>
+                </Link>
+                </div>
             ))}
+            
         </Layout>
     )
 }

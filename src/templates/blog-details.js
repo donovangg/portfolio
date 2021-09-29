@@ -1,15 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
 export default function blogDetails({ data }) {
   const { html } = data.markdownRemark
 
   return (
-    <div>
+    <Layout>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </div>
+    </Layout>
   )
 }
 
