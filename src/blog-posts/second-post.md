@@ -1,10 +1,10 @@
 ---
-title: My New Personal Site. The Details
-subhead: Gatsby, Chakra and no design chops
-date: 2021-10-01T00:00:00+00:00
+title: second post
+subhead: yeet
+date: 2021-10-05T00:00:00+00:00
 thumb: "../images/anicharadb.png"
 category: blog
-slug: first-post-ughara
+slug: second-post-ughara
 ---
 
 ## yo
