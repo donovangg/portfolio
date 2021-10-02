@@ -1,0 +1,15 @@
+.blog {
+    min-height: 100vh;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.blog h1 {
+    font-size: 5rem;
+}
+
+.blog p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    letter-spacing: 1.4;
+}

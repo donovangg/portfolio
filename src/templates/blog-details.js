@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import * as styles from "../styles/blog-details.module.css"
 
 export default function blogDetails({ data }) {
   const { html } = data.markdownRemark
 
   return (
     <Layout>
-      <div
+      <div className={styles.blog}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Layout>
