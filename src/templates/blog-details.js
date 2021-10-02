@@ -15,11 +15,13 @@ export default function blogDetails({ data }) {
 }
 
 export const query = graphql`
-  query BlogQuery {
-    markdownRemark(frontmatter: { category: { eq: "blog" } }) {
+query BlogPost($slug: String) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        stack
         title
+        link
       }
     }
   }
