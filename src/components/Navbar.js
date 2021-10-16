@@ -110,28 +110,31 @@ export default function Navbar() {
         width="15%"
         display={[ "none", "none", "none", "flex"]}
       >
-        <a href="https://github.com/donovangomez" target="_blank">
+        <a href="https://github.com/donovangomez" rel="noopener" target="_blank">
           <IconButton
             icon={<FaGithub />}
             backgroundColor="transparent"
             border="2px"
             borderRadius="full"
+            aria-label="Go to Github"
           />
         </a>
-        <a href="https://twitter.com/donovan_kun" target="_blank">
+        <a href="https://twitter.com/donovan_kun" rel="noopener" target="_blank">
           <IconButton
             icon={<FaTwitter />}
             backgroundColor="transparent"
             border="2px"
             borderRadius="full"
+            aria-label="Go to Twitter"
           />
         </a>
-        <a href="https://www.linkedin.com/in/donovan-gomez/" target="_blank">
+        <a href="https://www.linkedin.com/in/donovan-gomez/" rel="noopener" target="_blank">
           <IconButton
             icon={<FaLinkedinIn />}
             backgroundColor="transparent"
             border="2px"
             borderRadius="full"
+            aria-label="Go to LinkedIn"
           />
         </a>
       </Flex>
