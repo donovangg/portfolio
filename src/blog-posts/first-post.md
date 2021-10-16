@@ -7,12 +7,8 @@ category: blog
 slug: hello-world
 ---
 
-# Hello, World! I’m Lost
-
-Hello world my name is Donovan. I’ve been on this coding journey on and off for around two years now. As I write this in October of 2021 I can confidently say I’m each of the following: lost, confused and frustrated. Myself, like so many other people, have turned to coding for a way out of a current job. I am currently in my 5th year of being a night time phone operator for a pharmacy. I come home and I’m exhausted. I feel like I can’t keep up with the many bootcamp grads and the amazing projects I see on r/webdev. That’s where I’ve messed up. 
-
-
-I’m done comparing my journey to others. This is my own path. This blog is starting to prove to myself I can do this. I’m hoping that people who feel the same as myself can start to feel a little hope. Hello, World! Let’s do this.
+## Introductions are in order
+Hello World, I’m Donovan and I’m trying to make cool things on the internet. I believe intros are in order for the two people reading this. Nice to meet you, I’m Donovan. I’ve been learning to code on and off for around the last two years. For the last two years I’ve kept quiet about this but I figured it's about time to come clean. I’ve been learning to code not for a huge silicon valley salary but I honestly want to make something cool. The last 10 years of my life in food service I very rarely got to feel like I created something with a team I was proud of. I hope I can make this dream into a reality. Part of getting a job though is I need a portfolio especially since I haven’t finished school. My next post will be all about my portfolio and why I chose Gatsby.
 
 Much Love,
 Donovan

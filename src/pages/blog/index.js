@@ -33,12 +33,15 @@ query BlogHomeQuery {
   allMarkdownRemark(filter: {frontmatter: {category: {eq: "blog"}}}) {
     nodes {
       frontmatter {
-        slug
-        category
-        title
+        date(fromNow: false)
+        link
+        repo
+        stack
         subhead
+        slug
       }
     }
   }
 }
+
 `
