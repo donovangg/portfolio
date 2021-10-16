@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { Flex, Text, Heading, Box, IconButton } from "@chakra-ui/react"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaChevronLeft } from "@react-icons/all-files/fa/FaChevronLeft"
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt"
 import * as styles from "../styles/project-details.module.css"
 
@@ -14,6 +15,12 @@ export default function ProjectDetails({ data }) {
   return (
     <Layout>
       <Flex flexDir="column" width="90%" height="100%" m="auto">
+        <Link to="/projects">
+          <Flex alignItems="center">
+          <IconButton icon={<FaChevronLeft />} fontSize="3xl" variant="unstyled" m={0} padding={0} />
+          <Text display="inline-block" fontSize="2xl">Back</Text>
+          </Flex>
+          </Link>
         <Heading color="blue.400" textAlign={['center', 'center', 'left', 'left']} fontSize="8xl">
           {title}
         </Heading>
