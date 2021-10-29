@@ -21,41 +21,4 @@ exports.createPages = async ({ graphql, actions}) => {
     });
     });
   })  
-
-  // create another query for the blog page
-  const  blogs  = await graphql(`
-  query Blog {
-    allMarkdownRemark(filter: {frontmatter: {category: {eq: "blog"}}}) {
-      nodes {
-        frontmatter {
-          slug
-        }
-      }
-    }
-  }
-  `).then(result => {
-    result.data.allMarkdownRemark.nodes.forEach(result => {
-      createPage({
-        path: '/blog/' + result.frontmatter.slug,
-        component: path.resolve('./src/templates/blog-details.js'),
-        context: { slug: result.frontmatter.slug }
-    });
-    });
-  });
 }
-//   projects.data.allMarkdownRemark.nodes.forEach(node => {
-//       actions.createPage({
-//           path: '/projects/' + node.frontmatter.slug,
-//           component: path.resolve('./src/templates/project-details.js'),
-//           context: { slug: node.frontmatter.slug }
-//       })
-//   })
-
-//    blogs.data.allMarkdownRemark.nodes.forEach(node => {
-//     actions.createPage({
-//       path: '/blog/' + node.frontmatter.slug,
-//       component: path.resolve('./src/templates/blog-details.js'),
-//       context: { slug: node.frontmatter.slug }
-//   })
-//    })
-// }

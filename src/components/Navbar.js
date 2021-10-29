@@ -77,7 +77,11 @@ export default function Navbar() {
 
           <DrawerFooter>
             <Flex justifyContent="space-around" width="100%">
-              <a href="https://github.com/donovangomez" rel="noopener noreferrer" target="_blank">
+              <a
+                href="https://github.com/donovangomez"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <IconButton
                   icon={<FaGithub />}
                   backgroundColor="transparent"
@@ -85,7 +89,11 @@ export default function Navbar() {
                   borderRadius="full"
                 />
               </a>
-              <a href="https://twitter.com/hi_im_donovan" rel="noopener noreferrer" target="_blank">
+              <a
+                href="https://twitter.com/hi_im_donovan"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <IconButton
                   icon={<FaTwitter />}
                   backgroundColor="transparent"
@@ -93,7 +101,11 @@ export default function Navbar() {
                   borderRadius="full"
                 />
               </a>
-              <a href="https://www.linkedin.com/in/donovan-gomez/" rel="noopener noreferrer" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/donovan-gomez/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <IconButton
                   icon={<FaLinkedinIn />}
                   backgroundColor="transparent"
@@ -108,9 +120,13 @@ export default function Navbar() {
       <Flex
         justifyContent="space-around"
         width="15%"
-        display={[ "none", "none", "none", "flex"]}
+        display={["none", "none", "none", "flex"]}
       >
-        <a href="https://github.com/donovangomez" rel="noopener" target="_blank">
+        <a
+          href="https://github.com/donovangomez"
+          rel="noopener"
+          target="_blank"
+        >
           <IconButton
             icon={<FaGithub />}
             backgroundColor="transparent"
@@ -119,7 +135,11 @@ export default function Navbar() {
             aria-label="Go to Github"
           />
         </a>
-        <a href="https://twitter.com/hi_im_donovan" rel="noopener" target="_blank">
+        <a
+          href="https://twitter.com/hi_im_donovan"
+          rel="noopener"
+          target="_blank"
+        >
           <IconButton
             icon={<FaTwitter />}
             backgroundColor="transparent"
@@ -128,7 +148,11 @@ export default function Navbar() {
             aria-label="Go to Twitter"
           />
         </a>
-        <a href="https://www.linkedin.com/in/donovan-gomez/" rel="noopener" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/donovan-gomez/"
+          rel="noopener"
+          target="_blank"
+        >
           <IconButton
             icon={<FaLinkedinIn />}
             backgroundColor="transparent"
@@ -145,14 +169,14 @@ export default function Navbar() {
         height="100%"
         justifyContent="space-around"
         align-alignItems="center"
-        display={["none", "none","none", "flex"]}
+        display={["none", "none", "none", "flex"]}
       >
-        <NavItem item="Home"  to="/" />
+        <NavItem item="Home" to="/" />
         <NavItem item="Portfolio" to="/projects" />
         <NavItem item="About" to="/about" />
         <a href="https://blog.donovangomez.com/" target="_blank">
-        <NavItem item="Blog" />
-          </a>  
+          <NavItem item="Blog" />
+        </a>
         <NavItem item="Contact" to="/contact" />
         <Box>
           <IconButton
