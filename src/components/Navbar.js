@@ -150,7 +150,9 @@ export default function Navbar() {
         <NavItem item="Home"  to="/" />
         <NavItem item="Portfolio" to="/projects" />
         <NavItem item="About" to="/about" />
-        <NavItem item="Blog" to="/blog" />
+        <a href="https://blog.donovangomez.com/" target="_blank">
+        <NavItem item="Blog" />
+          </a>  
         <NavItem item="Contact" to="/contact" />
         <Box>
           <IconButton
