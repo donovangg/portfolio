@@ -77,7 +77,7 @@ export default function Navbar() {
 
           <DrawerFooter>
             <Flex justifyContent="space-around" width="100%">
-              <a href="https://github.com/donovangomez" target="_blank">
+              <a href="https://github.com/donovangomez" rel="noopener noreferrer" target="_blank">
                 <IconButton
                   icon={<FaGithub />}
                   backgroundColor="transparent"
@@ -85,7 +85,7 @@ export default function Navbar() {
                   borderRadius="full"
                 />
               </a>
-              <a href="https://github.com/donovangomez" target="_blank">
+              <a href="https://twitter.com/hi_im_donovan" rel="noopener noreferrer" target="_blank">
                 <IconButton
                   icon={<FaTwitter />}
                   backgroundColor="transparent"
@@ -93,7 +93,7 @@ export default function Navbar() {
                   borderRadius="full"
                 />
               </a>
-              <a href="https://github.com/donovangomez" target="_blank">
+              <a href="https://www.linkedin.com/in/donovan-gomez/" rel="noopener noreferrer" target="_blank">
                 <IconButton
                   icon={<FaLinkedinIn />}
                   backgroundColor="transparent"
@@ -119,7 +119,7 @@ export default function Navbar() {
             aria-label="Go to Github"
           />
         </a>
-        <a href="https://twitter.com/donovan_kun" rel="noopener" target="_blank">
+        <a href="https://twitter.com/hi_im_donovan" rel="noopener" target="_blank">
           <IconButton
             icon={<FaTwitter />}
             backgroundColor="transparent"
