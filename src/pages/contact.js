@@ -17,6 +17,7 @@ import {
 export default function contact() {
   return (
     <Layout>
+      <Flex height="90vh" flexDir="column">
       <Box mt={12}>
         <Heading
            bgGradient="linear(to-r, #4299E1,#5F87D9)"
@@ -85,6 +86,7 @@ export default function contact() {
           </FormControl>
           <Button width="100%" backgroundColor="blue.400" type="submit">Send</Button>
         </Flex>
+      </Flex>
       </Flex>
     </Layout>
   )

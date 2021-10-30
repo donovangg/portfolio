@@ -13,6 +13,7 @@ export default function Layout({ children }) {
       </Helmet>
       <Navbar />
       <div>{children}</div>
+      <Footer />
     </div>
   )
 }
