@@ -9,6 +9,7 @@ export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
+      <Flex minH="100vh" flexDir="column">
       <Box width="90%" m="auto">
         <Text
           textAlign="center"
@@ -80,6 +81,7 @@ export default function Projects({ data }) {
             </Flex>
           </Box>
         ))}
+      </Flex>
       </Flex>
     </Layout>
   )

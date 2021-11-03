@@ -15,7 +15,8 @@ export default function about() {
   return (
     <Layout>
       <Flex
-        flexDirection={["column", "column", "row", "row"]}
+        flexDirection={["column", "column", "row", "row"]} 
+        minH="100vh"
       >
         <Flex flex="1" m={2} flexDir="column">
           <Text
@@ -24,6 +25,7 @@ export default function about() {
             bgClip="text"
             fontWeight="extrabold"
             mt={5}
+            py={6}
           >
             Hi I'm Donovan!
           </Text>
@@ -36,10 +38,10 @@ export default function about() {
           <Text
             fontSize="7xl"
             textAlign="center"
-            textTransform="uppercase"
             bgGradient="linear(to-r, #4299E1,#5F87D9)"
             bgClip="text"
             fontWeight="extrabold"
+            py={6}
           >
             About
           </Text>
@@ -68,6 +70,7 @@ export default function about() {
             bgGradient="linear(to-r, #4299E1,#5F87D9)"
             bgClip="text"
             fontWeight="extrabold"
+            py={6}
           >
             The Tech
           </Text>
