@@ -1,9 +1,12 @@
-import { graphql, Link } from "gatsby"
+import { graphql} from "gatsby"
+import {Link as GatsbyLink } from 'gatsby'
+import {Link as ChakraLink} from "@chakra-ui/react"
 import React from "react"
 import Layout from "../../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Flex, Text, Box, IconButton, Button} from "@chakra-ui/react"
-import { FaChevronRight } from "@react-icons/all-files/fa/FaChevronRight"
+import { FaChevronRight, } from "@react-icons/all-files/fa/FaChevronRight"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
@@ -25,8 +28,6 @@ export default function Projects({ data }) {
         <Flex
           margin="auto"
           width="90%"
-          border="2px"
-          borderColor="green.200"
           flexDir="column"
           justifyContent="center"
           alignItems="center"
@@ -42,6 +43,7 @@ export default function Projects({ data }) {
               overflow="hidden"
               maxWidth="1520px"
               flexDir={['column', 'column', 'column', 'row']}
+              key={project.id}
             >
               <Box flex="1">
                 <GatsbyImage
@@ -49,7 +51,7 @@ export default function Projects({ data }) {
                   image={getImage(project.frontmatter.thumb)}
                 />
               </Box>
-              <Box flex="1" p={3} position="relative">
+              <Flex flexDir="column" justifyContent="space-between" flex="1" p={3} position="relative">
                 <Text
                   as="h2"
                   fontSize="5xl"
@@ -61,20 +63,20 @@ export default function Projects({ data }) {
                 </Text>
                 <Text as="h3" fontSize="2xl">{project.frontmatter.stack}</Text>
                 <Text as="p">  {project.frontmatter.description} </Text>
-                <Link
-                  to={"/projects/" + project.frontmatter.slug}
-                  key={project.id}
-                >
-                  <Flex alignItems="center" border="2px">
-                      <a href={project.frontmatter.repo} target="_blank" rel="noopener noreferrer">
-                        GitHub
-                      </a>
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
-                        Live
-                      </Link>
+                  <Flex alignItems="center" justifyContent="space-between" width="50%" border="2px">
+                      <ChakraLink href={project.frontmatter.repo} target="_blank" rel="noopener noreferrer">
+                      <Button leftIcon={<FaGithub />} colorScheme="teal" variant="solid">
+    Repo
+  </Button>
+                      </ChakraLink>
+                      <ChakraLink href={project.frontmatter.link} target="_blank" rel="noopener noreferrer">
+                      <Button>Live</Button>
+                      </ChakraLink>
+                      <GatsbyLink to={"/projects/" + project.frontmatter.slug}>
+                        <Button>Details</Button>
+                      </GatsbyLink>
                   </Flex>
-                </Link>
-              </Box>
+              </Flex>
             </Flex>
           ))}
         </Flex>

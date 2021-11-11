@@ -7,7 +7,7 @@ thumb: ../images/saliou-website.png
 repo: https://github.com/donovangomez/saliou-website
 link: https://salioumboup.com/
 category: project
-description: A static website for a Venice based musician and friend. The main goal of a website is to condense all of his links on one site. Saliou has music available on Spotify, Bandcamp, Soundcloud and on YouTube.
+description: A static website for a Venice based musician and friend. The main goal of a website is to condense all of his streaming services on one site. Saliou has music available on Spotify, Bandcamp, Soundcloud and on YouTube.
 ---
 
 ## Project Explanation

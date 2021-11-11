@@ -7,7 +7,7 @@ thumb: "../images/anicharadb.png"
 repo: https://github.com/donovangomez/my-character-list
 link: https://anicharadb.netlify.app/
 category: project
-description: A static website for a Venice based musician and friend. The main goal of a website is to condense all of his links on one site. Saliou has music available on Spotify, Bandcamp, Soundcloud and on YouTube.
+description: A search page to look up anime characters. The JikanAPI is being called using React Hooks to display search results.
 ---
 
 ## Project Explanation
