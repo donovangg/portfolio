@@ -2,7 +2,7 @@
 title: Melty Blood Tournaments
 stack: NextJS - Supabase - Chakra UI
 slug: melty-tournaments
-date: 2021-10-31T00:00:00+00:00
+date: 2021-01-04T00:00:00+00:00
 thumb: ../images/melty-tournaments-home.png
 repo: https://github.com/donovangomez/melty-tournaments
 link: https://melty-tournaments.vercel.app/
