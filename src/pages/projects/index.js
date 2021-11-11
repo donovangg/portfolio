@@ -75,7 +75,7 @@ export default function Projects({ data }) {
                   alignItems="center"
                   justifyContent="space-between"
                   width="50%"
-                  border="2px"
+          
                 >
                   <ChakraLink
                     href={project.frontmatter.repo}
@@ -112,25 +112,27 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-  query ProjectQuery {
-    allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: "project" } } }
-    ) {
-      nodes {
-        frontmatter {
-          title
-          stack
-          slug
-          link
-          repo
-          description
-          thumb {
-            childImageSharp {
-              gatsbyImageData(transformOptions: { fit: COVER })
-            }
+query ProjectQuery {
+  allMarkdownRemark(
+    filter: {frontmatter: {category: {eq: "project"}}}
+    sort: {fields: frontmatter___date, order: DESC}
+  ) {
+    nodes {
+      frontmatter {
+        title
+        stack
+        slug
+        link
+        date
+        repo
+        description
+        thumb {
+          childImageSharp {
+            gatsbyImageData(transformOptions: {fit: COVER})
           }
         }
       }
     }
   }
+}
 `
