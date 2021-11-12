@@ -21,7 +21,7 @@ export default function ProjectDetails({ data }) {
           <Text display="inline-block" fontSize="2xl">Back</Text>
           </Flex>
           </Link>
-        <Heading color="blue.400" textAlign={['center', 'center', 'left', 'left']} fontSize="8xl">
+        <Heading color="blue.400" textAlign={['center', 'center', 'left', 'left']} fontSize={['5xl', '6xl', '8xl', '8xl']}>
           {title}
         </Heading>
         <Text fontSize="2xl" textAlign={['center', 'center', 'left', 'left']} >Stack: {stack}</Text>
