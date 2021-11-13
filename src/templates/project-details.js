@@ -18,14 +18,14 @@ export default function ProjectDetails({ data }) {
         <Link to="/projects">
           <Flex alignItems="center">
           <IconButton icon={<FaChevronLeft />} fontSize="3xl" variant="unstyled" m={0} padding={0} />
-          <Text display="inline-block" fontSize="2xl">Back</Text>
+          <Text display="inline-block" py={12} fontSize="2xl">Back</Text>
           </Flex>
           </Link>
-        <Heading color="blue.400" textAlign={['center', 'center', 'left', 'left']} fontSize={['5xl', '6xl', '8xl', '8xl']}>
+        <Heading color="blue.400" py={8} textAlign={['center', 'center', 'left', 'left']} fontSize={['5xl', '6xl', '8xl', '8xl']}>
           {title}
         </Heading>
-        <Text fontSize="2xl" textAlign={['center', 'center', 'left', 'left']} >Stack: {stack}</Text>
-        <Flex justifyContent={['center', 'center', 'flex-start', 'flex-start']}>
+        <Text fontSize="2xl" py={3}  textAlign={['center', 'center', 'left', 'left']} >Stack: {stack}</Text>
+        <Flex py={5} justifyContent={['center', 'center', 'flex-start', 'flex-start']}>
           <a href={repo} fontSize="2xl">
             <IconButton icon={<FaGithub />} fontSize="2xl"  variant="none"/>
           </a>

@@ -7,10 +7,10 @@ thumb: ../images/melty-tournaments-home.png
 repo: https://github.com/donovangomez/melty-tournaments
 link: https://melty-tournaments.vercel.app/
 category: project
-description: A NextJS project created to find Melty blood tournaments. Users are able to authenticate and add their own tournaments are discovery.
+description: A web app built for Melty Blood players to find online tournaments. Players can authenticate with a third party and add their own tournaments. Supabase's Postgres is used on the back end to store tournaments.
 ---
 
-My Drive
+
 # Table of Contents
 1. [Project Purpose](#Project-Purpose)
 2. [Tech Stack](#Tech-Stack)
