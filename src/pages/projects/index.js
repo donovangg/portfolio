@@ -12,7 +12,7 @@ export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
-      <Flex minH="100vh" flexDir="column">
+      <Flex minH="100vh" flexDir="column" paddingBottom="15rem">
         <Box width="90%" m="auto">
           <Text
             textAlign="center"
@@ -21,6 +21,7 @@ export default function Projects({ data }) {
             fontSize={["6xl", "6xl", "8xl"]}
             fontWeight="extrabold"
             my={12}
+            paddingBottom="5rem"
           >
             Projects
           </Text>
@@ -35,7 +36,7 @@ export default function Projects({ data }) {
           {projects.map(project => (
             <Flex
               as="article"
-              my={6}
+              my={14}
               height="100%"
               width="100%"
               boxShadow="lg"
@@ -53,10 +54,10 @@ export default function Projects({ data }) {
               </Box>
               <Flex
                 flexDir="column"
-                justifyContent="space-between"
+                justifyContent="space-around"
                 flex="1"
-                p={3}
                 position="relative"
+                ml={4}
               >
                 <Text
                   as="h2"
@@ -64,18 +65,21 @@ export default function Projects({ data }) {
                   bgGradient="linear(to-r, #4299E1,#5F87D9)"
                   bgClip="text"
                   fontWeight="semibold"
+                  p={["5", "4", "2", "1"]}
                 >
                   {project.frontmatter.title}
                 </Text>
-                <Text as="h3" fontSize="2xl">
+                <Text as="h3" fontSize="2xl" p={["5", "4", "2", "1"]}>
                   {project.frontmatter.stack}
                 </Text>
-                <Text as="p"> {project.frontmatter.description} </Text>
+                <Text as="p" p={["5", "4", "0", "1"]}>
+                  {" "}
+                  {project.frontmatter.description}{" "}
+                </Text>
                 <Flex
                   alignItems="center"
                   justifyContent="space-between"
                   width="50%"
-          
                 >
                   <ChakraLink
                     href={project.frontmatter.repo}
@@ -84,7 +88,7 @@ export default function Projects({ data }) {
                   >
                     <Button
                       leftIcon={<FaGithub />}
-                      colorScheme="teal"
+                      backgroundColor="blue.400"
                       variant="solid"
                     >
                       Repo
@@ -112,27 +116,27 @@ export default function Projects({ data }) {
 
 // export page query
 export const query = graphql`
-query ProjectQuery {
-  allMarkdownRemark(
-    filter: {frontmatter: {category: {eq: "project"}}}
-    sort: {fields: frontmatter___date, order: DESC}
-  ) {
-    nodes {
-      frontmatter {
-        title
-        stack
-        slug
-        link
-        date
-        repo
-        description
-        thumb {
-          childImageSharp {
-            gatsbyImageData(transformOptions: {fit: COVER})
+  query ProjectQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "project" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          stack
+          slug
+          link
+          date
+          repo
+          description
+          thumb {
+            childImageSharp {
+              gatsbyImageData(transformOptions: { fit: COVER })
+            }
           }
         }
       }
     }
   }
-}
 `
