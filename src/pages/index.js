@@ -8,11 +8,21 @@ import {
 } from "@chakra-ui/react"
 import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Helmet } from "react-helmet"
 
 export default function Home() {
   const headingText = useColorModeValue("gray.800", "gray.50")
   return (
     <Layout>
+      <Helmet>
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="../images/portfolio.png" />
+        <meta
+          property="og:description"
+          content="Hi I'm Donovan and this is my portfolio of things on the internet"
+        />
+        <meta property="og:url" content="//www.donovangomez.com" />
+      </Helmet>
       <Flex height="90vh" justifyContent="center" alignItems="center">
         <Flex
           m={0}
