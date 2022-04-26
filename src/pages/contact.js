@@ -39,7 +39,7 @@ export default function contact() {
         alignItems="center"
       >
         <Flex as="form" flex="1" flexDir="column" 
-        alignItems="center">
+        alignItems="center" data-netlify="true" method="POST">
           <FormControl id="first-name" isRequired>
             <FormLabel
               bgGradient="linear(to-r, #4299E1,#5F87D9)"
@@ -83,6 +83,9 @@ export default function contact() {
               Your Message
             </FormLabel>
             <Textarea placeholder="In n Out is awesome" />
+            <Box>
+              <Box data-netlify-recaptha="true"></Box>
+            </Box>
           </FormControl>
           <Button width="100%" backgroundColor="blue.400" type="submit">Send</Button>
         </Flex>
