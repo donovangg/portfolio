@@ -9,6 +9,7 @@ import {
 import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
 
 export default function Home() {
   const headingText = useColorModeValue("gray.800", "gray.50")

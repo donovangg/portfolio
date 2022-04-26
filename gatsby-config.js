@@ -9,6 +9,9 @@ module.exports = {
   siteMetadata: {
     title: `Donovan Gomez | Web developer`,
     description: `Donovan's webdev portfolio. You are amazing.`,
+    url: "https://donovangomez.com",
+    // image: '/portfolio.png',
+    twitterUsername: "@hi_im_donovan"
   },
   plugins: [
     "@chakra-ui/gatsby-plugin",
