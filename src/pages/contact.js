@@ -49,7 +49,7 @@ export default function contact() {
             >
               First name
             </FormLabel>
-            <Input placeholder="First name" />
+            <Input placeholder="First name" name="first name" />
           </FormControl>
           <FormControl id="last-name" isRequired>
             <FormLabel
@@ -60,7 +60,7 @@ export default function contact() {
             >
               Last name
             </FormLabel>
-            <Input placeholder="First name" />
+            <Input placeholder="last name" name="last name" />
           </FormControl>
           <FormControl id="email" isRequired>
             <FormLabel
@@ -71,7 +71,7 @@ export default function contact() {
             >
               Email address
             </FormLabel>
-            <Input type="email" />
+            <Input type="email" name="email" />
           </FormControl>
           <FormControl id="message" isRequired>
             <FormLabel
@@ -82,7 +82,7 @@ export default function contact() {
             >
               Your Message
             </FormLabel>
-            <Textarea placeholder="In n Out is awesome" />
+            <Textarea placeholder="In n Out is awesome" name="message" />
             <Box>
               <Box data-netlify-recaptha="true"></Box>
             </Box>
