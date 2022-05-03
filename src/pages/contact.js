@@ -39,7 +39,8 @@ export default function contact() {
         alignItems="center"
       >
         <Flex as="form" flex="1" flexDir="column" 
-        alignItems="center" data-netlify="true" name="contact" method="POST">
+        alignItems="center" data-netlify="true" name="contact" action="POST">
+          <input type="hidden" name="form-name" value="contact" />
           <FormControl id="first-name" isRequired>
             <FormLabel
               bgGradient="linear(to-r, #4299E1,#5F87D9)"

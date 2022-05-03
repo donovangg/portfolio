@@ -72,7 +72,7 @@ export default function Navbar() {
             <NavItem item="Projects" to="/projects" />
             <NavItem item="About" to="/about" />
             <NavItem item="Blog" to="/blog" />
-            <NavItem item="Contact" to="/contact" />
+            {/* <NavItem item="Contact" to="/contact" /> */}
           </DrawerBody>
 
           <DrawerFooter>
@@ -177,7 +177,7 @@ export default function Navbar() {
         <a href="https://blog.donovangomez.com/" target="_blank">
           <NavItem item="Blog" />
         </a>
-        <NavItem item="Contact" to="/contact" />
+        {/* <NavItem item="Contact" to="/contact" /> */}
         <Box>
           <IconButton
             icon={colorMode == "light" ? <FaMoon /> : <FaSun />}
