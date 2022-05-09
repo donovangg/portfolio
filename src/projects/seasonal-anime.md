@@ -3,9 +3,9 @@ title: Seasonal Anilist
 stack: React - Styled Components - GraphQL - AniListAPI
 slug: seasonal-anilist
 date: 2021-10-26T00:00:00+00:00
-thumb: ../images/seasonal-anime.png
-repo: https://github.com/donovangomez/seasonal-anichart
-link: https://seasonal-anichart.vercel.app/
+thumb: ../images/seasonal-anilist.png
+repo: https://github.com/donovangomez/seasonal-anime-anilistAPI
+link: https://cerulean-taffy-9d9a0b.netlify.app/
 category: project
 description: Anime streaming has been spread out lately and this website was built for the purpose of having a central location to see what anime is airing that season. The AniList API is updated with streaming locations throughout the season and that is where the data comes from.
 ---
