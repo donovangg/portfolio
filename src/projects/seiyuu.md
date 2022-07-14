@@ -1,13 +1,13 @@
 ---
-title: Melty Blood Tournaments
-stack: NextJS - Supabase - Chakra UI
+title: Seiyuu Search
+stack: ReactJS - JikanAPI
 slug: melty-tournaments
 date: 2021-10-31T00:00:00+00:00
 thumb: ../images/melty-tournaments-home.png
-repo: https://github.com/donovangomez/melty-tournaments
-link: https://melty-tournaments.vercel.app/
+repo: https://github.com/donovangomez/seiyuu-db-jikan
+link: https://seiyuudb.netlify.app/search
 category: project
-description: A web app built for Melty Blood players to find online tournaments. Players can authenticate with a third party and add their own tournaments. Supabase's Postgres is used on the back end to store tournaments.
+description: A search page that hits the new Jikan API and receives seiyuu data. I've got the dynamic
 ---
 
 
