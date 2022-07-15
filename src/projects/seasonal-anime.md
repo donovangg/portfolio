@@ -3,11 +3,7 @@ title: Seasonal Anilist
 stack: React - Styled Components - GraphQL - AniListAPI
 slug: seasonal-anilist
 date: 2021-10-26T00:00:00+00:00
-<<<<<<< HEAD
 thumb: ../images/seasonal-anime.png
-=======
-thumb: ../images/seasonal-anilist.png
->>>>>>> 90118ed71ad867a7f3862d2332e18afe4c32912a
 repo: https://github.com/donovangomez/seasonal-anime-anilistAPI
 link: https://cerulean-taffy-9d9a0b.netlify.app/
 category: project
