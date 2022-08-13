@@ -4,7 +4,7 @@ import { Link as ChakraLink } from "@chakra-ui/react"
 import React from "react"
 import Layout from "../../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Flex, Text, Box, IconButton, Button } from "@chakra-ui/react"
+import { Flex, Text, Box, IconButton, Button, ButtonGroup } from "@chakra-ui/react"
 import { FaChevronRight } from "@react-icons/all-files/fa/FaChevronRight"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
@@ -76,11 +76,7 @@ export default function Projects({ data }) {
                   {" "}
                   {project.frontmatter.description}{" "}
                 </Text>
-                <Flex
-                  alignItems="center"
-                  justifyContent="space-between"
-                  width="50%"
-                >
+                <ButtonGroup>
                   <ChakraLink
                     href={project.frontmatter.repo}
                     target="_blank"
@@ -90,6 +86,8 @@ export default function Projects({ data }) {
                       leftIcon={<FaGithub />}
                       backgroundColor="blue.400"
                       variant="solid"
+                      size='lg'
+                      textDecoration="none"
                     >
                       Repo
                     </Button>
@@ -99,12 +97,12 @@ export default function Projects({ data }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button>Live</Button>
+                    <Button size='lg'>Live</Button>
                   </ChakraLink>
-                  <GatsbyLink to={"/projects/" + project.frontmatter.slug}>
-                    <Button>Details</Button>
+                  <GatsbyLink  border="2px" to={"/projects/" + project.frontmatter.slug}>
+                    <Button size='lg'>Details</Button>
                   </GatsbyLink>
-                </Flex>
+                </ButtonGroup>
               </Flex>
             </Flex>
           ))}
