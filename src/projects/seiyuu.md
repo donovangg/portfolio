@@ -7,7 +7,7 @@ thumb: ../images/seiyuu-db.png
 repo: https://github.com/donovangomez/seiyuu-db-jikan
 link: https://seiyuudb.netlify.app/search
 category: project
-description: A search page that hits the new Jikan API and receives seiyuu data. I've got the dynamic
+description: Seiyuu search engine that makes use of the current version of the Jikan API
 ---
 
 
