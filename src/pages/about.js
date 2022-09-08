@@ -47,20 +47,18 @@ export default function about() {
           </Text>
           <Text fontSize="xl" my={2}>
             I first started learning web development two years ago just to make
-            funny things for my friends. Learning new technologies to make those
-            things is what I find enjoyable about web development.
+            funny things for my friends. Learning new technologies to make fun things
+            is what I find the most fun about web dev.
           </Text>
           <Text fontSize="xl" my={2}>
-            Learning new things on the internet is so easy nowadays so I try and
-            keep up on <a href="#">CSS Tricks</a>, <a href="#">Syntax.fm</a> and
-            many YouTube videos. If you're curious hit me up on{" "}
-            <a href="#">Twitter</a> and I've got some good recommendations.
+            There are so many good resources for learning new things these days. I try and 
+            keep up with <a href="https://syntax.fm/" target="_blank">Syntax.fm</a> and the numerous YouTube channels I follow. One 
+            of my favorites is <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA" target="_blank">Fireship IO.</a> I've got so many more channels I follow that I 
+            think create awesome content. Don't be afraid to hit me up on <a href="#">Twitter</a> and ask!
           </Text>
           <Text fontSize="xl">
-            When I'm trying to give my eyes a break I'll go and try to
-            skateboard. It definitely doesn't come easy anymore but I think it
-            helps with coding. Spending hours on a trick is almost like working
-            on a bug.
+            When I'm trying to give my eyes a break I'll go and try to ride my skateboard around.
+            I don't have the time to skate the streets like I used to but LA has so many sick plazas.
           </Text>
         </Flex>
         <Flex flex="1" m={2}  flexDir="column">

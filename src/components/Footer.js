@@ -39,7 +39,7 @@ export default function Footer() {
           {" "}
           Netlify
         </Link>
-        {/* <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
+        {/* <a href="https://www.flaticon.com/free-icons/kpop" title="kpop icons">Kpop icons created by Freepik - Flaticon</a> */}
       </Text>
     </Flex>
   )
