@@ -2,9 +2,10 @@ import React from "react"
 import { Flex, Text, Box, IconButton, Link } from "@chakra-ui/react"
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <Flex as="footer"  width="100%" justifyContent="space-around" alignItems="center" p={5}>
-      <Text as="h3"> &copy; Donovan Gomez 2021</Text>
+    <Flex as="footer"  width="100%" justifyContent="space-around" alignItems="center">
+      <Text as="h3"> &copy; Donovan Gomez {currentYear}</Text>
       <Text as="p">
         Built with{" "}
         <Link
